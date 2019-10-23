@@ -9,10 +9,10 @@ script:
   - docker run mywebfront/react-test npm test -- --coverage
 
 after_success:
-  - docker built -t mywebfront/multi-client ./client
-  - docker built -t mywebfront/multi-nginx ./nginx
-  - docker built -t mywebfront/multi-server ./server
-  - docker built -t mywebfront/multi-worker ./worker
+  - docker build -t mywebfront/multi-client ./client
+  - docker build -t mywebfront/multi-nginx ./nginx
+  - docker build -t mywebfront/multi-server ./server
+  - docker build -t mywebfront/multi-worker ./worker
 
 
 # Login to the docker CLI using variables I set at travis online
