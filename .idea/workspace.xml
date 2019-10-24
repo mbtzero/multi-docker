@@ -3,7 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="956a8db1-a985-424b-9549-457c61afe2a3" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.travis.yml" beforeDir="false" afterPath="$PROJECT_DIR$/.travis.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/k8s/redis-cluster-ip-service.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/k8s/redis-cluster-ip-service.yaml" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -27,7 +27,7 @@
           <entry key="Dockerfile" value="5" />
           <entry key="conf" value="4" />
           <entry key="dev" value="6" />
-          <entry key="js" value="11" />
+          <entry key="js" value="12" />
           <entry key="json" value="5" />
           <entry key="sh" value="2" />
           <entry key="yaml" value="15" />
@@ -38,7 +38,7 @@
         <counts>
           <entry key="Dockerfile" value="5" />
           <entry key="JSON" value="5" />
-          <entry key="JavaScript" value="11" />
+          <entry key="JavaScript" value="12" />
           <entry key="PLAIN_TEXT" value="12" />
           <entry key="YAML" value="19" />
         </counts>
@@ -50,7 +50,7 @@
           <entry key="dev" value="190" />
           <entry key="js" value="20" />
           <entry key="sh" value="285" />
-          <entry key="yaml" value="2025" />
+          <entry key="yaml" value="2026" />
           <entry key="yml" value="1177" />
         </counts>
       </usages-collector>
@@ -59,7 +59,7 @@
           <entry key="Dockerfile" value="192" />
           <entry key="JavaScript" value="20" />
           <entry key="PLAIN_TEXT" value="937" />
-          <entry key="YAML" value="3202" />
+          <entry key="YAML" value="3203" />
         </counts>
       </usages-collector>
     </session>
@@ -102,11 +102,20 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/.travis.yml">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="243">
               <caret line="15" column="64" selection-start-line="15" selection-start-column="64" selection-end-line="15" selection-end-column="64" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/server/index.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="361">
+              <caret line="61" column="2" selection-start-line="61" selection-start-column="2" selection-end-line="61" selection-end-column="2" />
             </state>
           </provider>
         </entry>
@@ -129,20 +138,11 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/k8s/redis-cluster-ip-service.yaml">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="153">
-              <caret line="9" column="2" selection-start-line="9" selection-start-column="2" selection-end-line="10" selection-end-column="20" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/k8s/postgres-deployment.yaml">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="544">
-              <caret line="32" column="31" selection-start-line="32" selection-start-column="31" selection-end-line="32" selection-end-column="31" />
+              <caret line="9" selection-start-line="9" selection-end-line="10" selection-end-column="22" />
             </state>
           </provider>
         </entry>
@@ -163,6 +163,7 @@
       <find>this.state.seenIndexes</find>
       <find>port</find>
       <find>standard-cluster-1</find>
+      <find>nothing yet</find>
     </findStrings>
     <dirStrings>
       <dir>$PROJECT_DIR$</dir>
@@ -189,7 +190,6 @@
         <option value="$PROJECT_DIR$/k8s/client-deployment.yaml" />
         <option value="$PROJECT_DIR$/k8s/client-cluster-ip-service.yaml" />
         <option value="$PROJECT_DIR$/k8s/server-cluster-ip-service.yaml" />
-        <option value="$PROJECT_DIR$/k8s/redis-cluster-ip-service.yaml" />
         <option value="$PROJECT_DIR$/k8s/redis-deployment.yaml" />
         <option value="$PROJECT_DIR$/k8s/database-persistent-volume-claim.yaml" />
         <option value="$PROJECT_DIR$/k8s/postgres-deployment.yaml" />
@@ -199,6 +199,7 @@
         <option value="$PROJECT_DIR$/k8s/ingress-service.yaml" />
         <option value="$PROJECT_DIR$/deploy.sh" />
         <option value="$PROJECT_DIR$/.travis.yml" />
+        <option value="$PROJECT_DIR$/k8s/redis-cluster-ip-service.yaml" />
       </list>
     </option>
   </component>
@@ -268,7 +269,7 @@
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1571954691101" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1571956500252" />
     <property name="go.gopath.indexing.explicitly.defined" value="true" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
@@ -313,12 +314,12 @@
       <workItem from="1571831480719" duration="595000" />
       <workItem from="1571837175501" duration="355000" />
       <workItem from="1571862155544" duration="8930000" />
-      <workItem from="1571929207006" duration="13942000" />
+      <workItem from="1571929207006" duration="14613000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="27233000" />
+    <option name="totallyTimeSpent" value="27904000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="26" y="28" width="1388" height="1309" extended-state="0" />
@@ -493,13 +494,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/server/index.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="654">
-          <caret line="68" column="44" selection-start-line="68" selection-start-column="44" selection-end-line="68" selection-end-column="44" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/docker-compose.yaml">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="782">
@@ -556,20 +550,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/k8s/redis-deployment.yaml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="255">
-          <caret line="15" column="19" selection-start-line="15" selection-start-column="19" selection-end-line="15" selection-end-column="19" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/k8s/redis-cluster-ip-service.yaml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="153">
-          <caret line="9" column="2" selection-start-line="9" selection-start-column="2" selection-end-line="10" selection-end-column="20" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/k8s/postgres-cluster-ip-service.yaml">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="153">
@@ -595,6 +575,27 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="243">
           <caret line="15" column="64" selection-start-line="15" selection-start-column="64" selection-end-line="15" selection-end-column="64" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/server/index.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="361">
+          <caret line="61" column="2" selection-start-line="61" selection-start-column="2" selection-end-line="61" selection-end-column="2" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/k8s/redis-deployment.yaml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="255">
+          <caret line="15" column="19" selection-start-line="15" selection-start-column="19" selection-end-line="15" selection-end-column="19" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/k8s/redis-cluster-ip-service.yaml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="153">
+          <caret line="9" selection-start-line="9" selection-end-line="10" selection-end-column="22" />
         </state>
       </provider>
     </entry>
