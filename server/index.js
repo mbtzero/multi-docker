@@ -47,7 +47,12 @@ app.get('/values/all', async (req, res) => {
 
 app.get('/values/current', async (req, res) => {
   redisClient.hgetall('values', (err, values) => {
-    res.send(values);
+    if (err != nill){
+      res.send({ message: 'server could not connect to redis'})
+    }
+    else {
+        res.send(values);
+    }
   });
 });
 
