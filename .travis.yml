@@ -17,6 +17,7 @@ before_install:
   - echo "$DOCKER_PASSWORD" | docker login -u "$DOCKER_ID" --password-stdin
 
 deploy:
+  provider: script
   script: bash ./deploy.sh
   on:
     branch: master
