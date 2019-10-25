@@ -1,18 +1,25 @@
 sudo: required
 services:
   - docker
-
-script:
-  - docker build -t mywebfront/angular -f ./angular/Dockerfile ./angular
-  - docker build -t mywebfront/backend -f ./backend/Dockerfile ./backend
-
-after_success:
-
-# Login to the docker CLI using variables I set at travis online
+env:
+  global:
+    - SHA=$(git rev-parse HEAD)
+    - CLOUDSDK_CORE_DISABLE_PROMPTS=1
+before_install:
+  - openssl aes-256-cbc -K $encrypted_ce91d9f99ab7_key -iv $encrypted_ce91d9f99ab7_iv -in service-account.json.enc -out service-account.json -d
+  - curl https://sdk.cloud.google.com | bash > /dev/null;
+  - source $HOME/google-cloud-sdk/path.bash.inc
+  - gcloud components update kubectl
+  - gcloud auth activate-service-account --key-file service-account.json
+  - gcloud config set project mikekube
+  - gcloud config set compute/zone us-central1-a
+  - gcloud container clusters get-credentials standard-cluster-3
   - echo "$DOCKER_PASSWORD" | docker login -u "$DOCKER_ID" --password-stdin
+  - docker build -t mywebfront/react-test -f ./client/Dockerfile.dev ./client
 
-# push to docker
-  - docker push mywebfront/angular
-  - docker push mywebfront/backend
 
+deploy:
+  script: bash ./deploy.sh
+  on:
+    branch: master
 
