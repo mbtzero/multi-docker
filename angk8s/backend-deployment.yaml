@@ -15,4 +15,6 @@ spec:
       containers:
       - name: backend
         image: mywebfront/backend
+        ports:
+          - containerPort: 8080
 
