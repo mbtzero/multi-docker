@@ -2,7 +2,7 @@ sudo: required
 services:
   - docker
 
-before_install:
+script:
   - docker build -t mywebfront/angular -f ./angular/Dockerfile ./angular
 
 after_success:
