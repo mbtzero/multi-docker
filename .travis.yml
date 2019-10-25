@@ -15,7 +15,10 @@ before_install:
   - gcloud config set compute/zone us-central1-a
   - gcloud container clusters get-credentials standard-cluster-3
   - echo "$DOCKER_PASSWORD" | docker login -u "$DOCKER_ID" --password-stdin
+  - docker build -t mywebfront/react-test -f ./client/Dockerfile.dev ./client
 
+script:
+- docker run -e CI=true mywebfront/react-test npm test
 deploy:
   provider: script
   script: bash ./deploy.sh
