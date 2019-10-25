@@ -3,9 +3,6 @@
   <component name="ChangeListManager">
     <list default="true" id="956a8db1-a985-424b-9549-457c61afe2a3" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/angk8s/nginx-deployment.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/angk8s/nginx-deployment.yaml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/angular/Dockerfile" beforeDir="false" afterPath="$PROJECT_DIR$/angular/Dockerfile" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/nginx/default.conf" beforeDir="false" afterPath="$PROJECT_DIR$/nginx/default.conf" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -71,7 +68,7 @@
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
           <entry key="Dockerfile" value="275" />
-          <entry key="conf" value="613" />
+          <entry key="conf" value="623" />
           <entry key="dev" value="420" />
           <entry key="js" value="172" />
           <entry key="json" value="82" />
@@ -86,7 +83,7 @@
           <entry key="Dockerfile" value="275" />
           <entry key="JSON" value="82" />
           <entry key="JavaScript" value="172" />
-          <entry key="PLAIN_TEXT" value="1318" />
+          <entry key="PLAIN_TEXT" value="1328" />
           <entry key="TypeScript" value="2" />
           <entry key="YAML" value="3690" />
         </counts>
@@ -103,8 +100,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/nginx/default.conf">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="187">
-              <caret line="11" selection-start-line="11" selection-end-line="11" />
+            <state relative-caret-position="17">
+              <caret line="1" column="23" selection-start-line="1" selection-start-column="23" selection-end-line="1" selection-end-column="23" />
             </state>
           </provider>
         </entry>
@@ -358,7 +355,7 @@
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1572032732538" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1572032890292" />
     <property name="go.gopath.indexing.explicitly.defined" value="true" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
@@ -407,18 +404,18 @@
       <workItem from="1571837175501" duration="355000" />
       <workItem from="1571862155544" duration="8930000" />
       <workItem from="1571929207006" duration="29203000" />
-      <workItem from="1572016769230" duration="12503000" />
+      <workItem from="1572016769230" duration="13035000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="54997000" />
+    <option name="totallyTimeSpent" value="55529000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="76" y="23" width="1388" height="1027" extended-state="0" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.2473997" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.2473997" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Image Layers" order="2" />
       <window_info id="Designer" order="3" />
@@ -433,7 +430,7 @@
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" />
       <window_info anchor="bottom" id="Database Changes" order="7" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Terminal" order="8" sideWeight="0.49925706" visible="true" weight="0.4024123" />
+      <window_info active="true" anchor="bottom" id="Terminal" order="8" sideWeight="0.49925706" visible="true" weight="0.4024123" />
       <window_info anchor="bottom" id="Event Log" order="9" sideWeight="0.5007429" side_tool="true" weight="0.4024123" />
       <window_info anchor="bottom" id="Version Control" order="10" weight="0.32894737" />
       <window_info anchor="bottom" id="Docker" order="11" show_stripe_button="false" />
@@ -704,9 +701,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/nginx/Dockerfile">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
     <entry file="file://$PROJECT_DIR$/angk8s/angular-deployment.yaml">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="306">
@@ -756,10 +750,13 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/nginx/Dockerfile">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
     <entry file="file://$PROJECT_DIR$/nginx/default.conf">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="187">
-          <caret line="11" selection-start-line="11" selection-end-line="11" />
+        <state relative-caret-position="17">
+          <caret line="1" column="23" selection-start-line="1" selection-start-column="23" selection-end-line="1" selection-end-column="23" />
         </state>
       </provider>
     </entry>
