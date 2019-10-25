@@ -5,6 +5,7 @@ services:
 script:
   - docker build -t mywebfront/angular -f ./angular/Dockerfile ./angular
   - docker build -t mywebfront/backend -f ./backend/Dockerfile ./backend
+  - docker build -t mywebfront/nginx -f ./nginx/Dockerfile ./nginx
 
 after_success:
 
@@ -14,4 +15,5 @@ after_success:
 # push to docker
   - docker push mywebfront/angular
   - docker push mywebfront/backend
+  - docker push mywebfront/nginx
 
