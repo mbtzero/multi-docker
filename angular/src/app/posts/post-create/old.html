@@ -1,0 +1,19 @@
+
+<h2>Test 1</h2>
+<textarea rows="6" [value]="newPost" #postInput></textarea>
+<hr>
+<button (click)="onAddPost(postInput)">Submit</button>
+<p>{{ newPost }}</p>
+
+<h2>Test 2</h2>
+
+
+<mat-card>
+  <mat-form-field>
+    <textarea matInput rows="6" [(ngModel)]="enteredValue"></textarea>
+    <button mat-raised-button
+            color="accent"
+            (click)="onAddPost2()">Submit</button>
+  </mat-form-field>
+  <p>{{ newPost2 }}</p>
+</mat-card>

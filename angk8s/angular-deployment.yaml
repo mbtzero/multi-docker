@@ -1,0 +1,19 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: angular-deployment
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      component: angular
+  template:
+    metadata:
+      labels:
+        component: angular
+    spec:
+      containers:
+        - name: angular
+          image: mywebfront/angular
+          ports:
+            - containerPort: 3000

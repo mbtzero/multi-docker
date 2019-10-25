@@ -1,0 +1,12 @@
+{
+  "dependencies": {
+    "express": "4.16.3",
+    "body-parser": "*",
+    "mongodb": "^3.3.3",
+    "mongoose": "^5.7.5",
+    "jsonwebtoken": "^8.5.1"
+  },
+  "scripts": {
+    "start": "node server.js"
+  }
+}

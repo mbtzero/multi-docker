@@ -1,0 +1,49 @@
+<div style="">
+  <div style="background-color: #eee; padding: 12px; border: solid 1px #ddd;">
+    <div style="padding: 0px; font-size: 18px;">
+      <b>Estimate your daily Green profile using the following factors:</b>
+    </div>
+  </div>
+  <mat-accordion multi="true" *ngIf="posts.length > 0">
+    <mat-expansion-panel *ngFor="let post of posts">
+      <mat-expansion-panel-header><div style="font-size: 18px; font-weight: 600">{{ post.title }}</div></mat-expansion-panel-header>
+        <div style="font-size: 16px;">
+          {{ post.content }}
+        </div>
+      <div style="margin-top: 16px; font-size: 16px;">
+        <ul>
+          <li>
+            <div>
+              {{ post.pts1title }}
+            </div>
+            <div>
+              <b>{{ post.pts1points }} pts</b>
+            </div>
+          </li>
+          <li style="margin-top: 4px;">
+            <div>
+              {{ post.pts2title }}
+            </div>
+            <div>
+              <b>{{ post.pts2points }} pts</b>
+            </div>
+          </li>
+          <li style="margin-top: 4px;">
+            <div>
+              {{ post.pts3title }}
+            </div>
+            <div>
+              <b>{{ post.pts3points }} pts</b>
+            </div>
+          </li>
+        </ul>
+
+      </div>
+        <mat-action-row *ngIf="userIsAuthenticated && userId === post.creator">
+          <button mat-button color="primary">EDIT</button>
+          <button mat-button color="warn" (click)="onDelete(post.id)">DELETE</button>
+        </mat-action-row>
+    </mat-expansion-panel>
+  </mat-accordion>
+  <p class="mat-body-1, info-text" *ngIf="posts.length == 0">No posts added yet!</p>
+</div>
