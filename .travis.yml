@@ -13,7 +13,7 @@ before_install:
   - gcloud auth activate-service-account --key-file service-account.json
   - gcloud config set project mikekube
   - gcloud config set compute/zone us-central1-a
-  - gcloud container clusters get-credentials standard-cluster-4
+  - gcloud container clusters get-credentials standard-cluster-5
   - echo "$DOCKER_PASSWORD" | docker login -u "$DOCKER_ID" --password-stdin
   - docker build -t mywebfront/react-test -f ./client/Dockerfile.dev ./client
 
