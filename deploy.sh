@@ -8,6 +8,6 @@ docker push mywebfront/angular:$SHA
 docker push mywebfront/backend:$SHA
 
 kubectl apply -f angk8s
-kubectl set image deployments/server-deployment server=mywebfront/backend:$SHA
-kubectl set image deployments/angular-deployment client=mywebfront/angular:$SHA
+kubectl set image deployments/backend-deployment backend=mywebfront/backend:$SHA
+kubectl set image deployments/angular-deployment angular=mywebfront/angular:$SHA
 
