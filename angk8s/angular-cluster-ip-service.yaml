@@ -3,10 +3,9 @@ kind: Service
 metadata:
   name: angular-cluster-ip-service
 spec:
-  type: NodePort
+  type: ClusterPort
   selector:
     component: angular
   ports:
     - port: 4200
       targetPort: 4200
-      nodePort: 31000

@@ -3,11 +3,11 @@ kind: Service
 metadata:
   name: backend-cluster-ip-service
 spec:
-  type: NodePort
+  type: ClusterPort
   selector:
     component: backend
   ports:
   - port: 8080
     targetPort: 8080
-    nodePort: 31500
+
 
