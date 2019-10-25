@@ -7,6 +7,6 @@ spec:
   selector:
     component: angular
   ports:
-    - port: 3000
-      targetPort: 3000
+    - port: 4200
+      targetPort: 4200
       nodePort: 31000

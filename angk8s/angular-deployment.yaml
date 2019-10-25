@@ -16,4 +16,4 @@ spec:
         - name: angular
           image: mywebfront/angular
           ports:
-            - containerPort: 3000
+            - containerPort: 4200
