@@ -15,8 +15,6 @@ before_install:
   - gcloud config set compute/zone us-central1-a
 
 
-script:
-- docker run -e CI=true mywebfront/react-test npm test
 deploy:
   provider: script
   script: bash ./deploy.sh
