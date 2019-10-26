@@ -3,7 +3,7 @@ kind: Service
 metadata:
   name: angular-cluster-ip-service
 spec:
-  type: ClusterPort
+  type: ClusterIP
   selector:
     component: angular
   ports:
