@@ -9,12 +9,19 @@ const mongoose = require('mongoose');
 
 
 
-mongoose.connect("mongodb://127.0.0.1:27017").then( () => {
-  console.log('connected to database')
-})
-  .catch( () => {
-    console.log("connect to database failed")
-  })
+var mongo_host = "mongodb://127.0.0.1:27017";
+
+if (process.env.MONGODB_HOST) {
+    mongohost = "mongodb://" + process.env.MONGODB_HOST;
+}
+
+mongoose.connect(mongohost)
+    .then( () => {
+        console.log('connected to database')
+    })
+    .catch( () => {
+        console.log("connect to database failed")
+    })
 
 app.use((req, res, next) => {
   res.setHeader('Access-Control-Allow-Origin', "*")
@@ -32,10 +39,6 @@ app.use("/api/posts/", postsRoutes);
 app.use("/api/user/", userRoutes);
 
 app.get('/api/posts/',(req,res, next) => {
-    return res.status(200).json(
-        {
-            message: 'Stub call',
-        });
 
     PostModel.find( {visible: "1" } ).then((documents => {
       res.status(200).json(

@@ -2,14 +2,29 @@ const express = require('express')
 
 const User = require('../models/user');
 const jwt = require("jsonwebtoken");
-
+const hash = require('object-hash');
 const router = express.Router();
 
 router.post('/signup',(req,res, next) => {
-  console.log('in signup api')
+        console.log('in signup api')
+        hashed_pwd = hash(req.body.password);
+        const user = new User(
+            {
+                email: req.body.email,
+                password: hashed_pwd,
+            }
+        );
 
+        user.save().then(() => {
+            console.log('user saved to database success + ' + hashed_pwd)
+        }).catch(() => {
+            console.log('user save to dabase error')
+        })
 
-})
+        res.status(201).json({message: 'signup successful'});
+    }
+)
+
 
 // Log user in
 router.post('/login',(req,res, next) => {
@@ -23,7 +38,15 @@ router.post('/login',(req,res, next) => {
       }
 
       fetchedUser = user;
-      return bcrypt.compare(req.body.password, user.password);
+
+      // compare passwords
+       enc =  hash(req.body.password);
+        console.log("user passed in password")
+        console.log(req.body.password)
+        console.log('comparing users ' + enc + ' against ' + user.password)
+
+        if (enc == user.password) return true;
+        return false;
     })
     .then(result=> {
       if (result) {

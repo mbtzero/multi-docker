@@ -1,9 +1,11 @@
 version: '3'
 services:
-  nginx:
-    build:
-      dockerfile: Dockerfile.dev
-      context: ./nginx
+  mongodb:
+    image: mongo
+    ports:
+    - "27017:27017"
+    volumes:
+    - "mongodata:/data/db"
   angular:
     build:
       dockerfile: Dockerfile.dev
@@ -12,6 +14,8 @@ services:
     build:
       dockerfile: Dockerfile.dev
       context: ./backend
+    environment:
+    - MONGODB_HOST=mongodb
   nginx:
     restart: always
     build:
@@ -19,4 +23,5 @@ services:
       context: ./nginx
     ports:
       - '5600:80'
-
+volumes:
+  mongodata:

@@ -23,9 +23,10 @@ export class AuthService {
     return this.token;
   }
 
+  baseURL = 'http://localhost:5600'
   //postAPI = 'http://localhost:8080/api/user/';
-  postAPI = 'http://mygreenprofile.com/api/user/';
-
+ // postAPI = 'http://mygreenprofile.com/api/user/';
+  postAPI = this.baseURL + '/api/user';
 
   getPostUpdateListener() {
     return this.postsUpdated.asObservable();
@@ -34,7 +35,7 @@ export class AuthService {
   addUser(email: string, password: string) {
     const user: User = { id: null, email: email, password: password};
 
-    this.http.post<{message: string}>(this.postAPI + 'signup', user).
+    this.http.post<{message: string}>(this.postAPI + '/signup', user).
       subscribe( (responseData) => {
         this.router.navigate(["/"]);
     });
@@ -58,7 +59,7 @@ export class AuthService {
   loginUser(email: string, password: string) {
     const user: User = { id: null, email: email, password: password};
 
-    this.http.post<{token: string, userId: string}>(this.postAPI + 'login', user).
+    this.http.post<{token: string, userId: string}>(this.postAPI + '/login', user).
     subscribe( (response) => {
       const token = response.token;
       this.token = token;
