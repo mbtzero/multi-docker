@@ -23,7 +23,7 @@ export class AuthService {
     return this.token;
   }
 
-  baseURL = 'http://localhost:5600'
+  baseURL = ''
   //postAPI = 'http://localhost:8080/api/user/';
  // postAPI = 'http://mygreenprofile.com/api/user/';
   postAPI = this.baseURL + '/api/user';
