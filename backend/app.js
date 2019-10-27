@@ -38,17 +38,7 @@ app.use("/", express.static(path.join(__dirname,"angular")));
 app.use("/posts/", postsRoutes);
 app.use("/user/", userRoutes);
 
-app.get('/posts/',(req,res, next) => {
 
-    PostModel.find( {visible: "1" } ).then((documents => {
-      res.status(200).json(
-      {
-        message: 'Post successfully fetched',
-        posts: documents,
-      });
-    })
-  );
-})
 
 app.get('/test/',(req,res, next) => {
     res.status(200).json(
@@ -67,15 +57,6 @@ app.get('/admin/posts/',(req,res, next) => {
     })
   );
 })
-
-
-app.get('/test/',(req,res, next) => {
-    res.status(200).json(
-        {
-            message: 'Plain Test successful',
-        });
-})
-
 
 
 module.exports = app;

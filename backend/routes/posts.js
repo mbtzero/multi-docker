@@ -4,6 +4,19 @@ const checkAuth = require('../middleware/check-auth');
 
 const router = express.Router();
 
+
+router.get('/posts/',(req,res, next) => {
+
+    PostModel.find( {visible: "1" } ).then((documents => {
+            res.status(200).json(
+                {
+                    message: 'Post successfully fetched',
+                    posts: documents,
+                });
+        })
+    );
+})
+
 router.post('',
   (req,res, next) => {
   const post = new PostModel(
@@ -21,6 +34,7 @@ router.post('',
       //  creator: "1"
     }
   );
+
 
   post.save().then( () => {
     console.log('saved post to database success')
@@ -52,6 +66,13 @@ router.delete('/:id',
       console.log(ex);
     })
 
+})
+
+router.get('/test2/',(req,res, next) => {
+    res.status(200).json(
+        {
+            message: 'Post Test successful',
+        });
 })
 
 module.exports = router;
