@@ -17,7 +17,7 @@ router.get('/posts/',(req,res, next) => {
     );
 })
 
-router.post('',
+router.post('/',
   (req,res, next) => {
   const post = new PostModel(
     {
@@ -48,7 +48,7 @@ router.post('',
 
 })
 
-router.delete('/:id',
+router.delete('/:id/',
   checkAuth,
   (req, res) =>{
   console.log('about to delete')
@@ -66,34 +66,6 @@ router.delete('/:id',
       console.log(ex);
     })
 
-})
-
-router.get('/test2/',(req,res, next) => {
-    res.status(200).json(
-        {
-            message: 'Post Test 2 successful',
-        });
-})
-
-router.get('/test3',(req,res, next) => {
-    res.status(200).json(
-        {
-            message: 'Post Test 3 successful',
-        });
-})
-
-router.get('test4/',(req,res, next) => {
-    res.status(200).json(
-        {
-            message: 'Post Test 4 successful',
-        });
-})
-
-router.get('test45',(req,res, next) => {
-    res.status(200).json(
-        {
-            message: 'Post Test 5 successful',
-        });
 })
 
 module.exports = router;
