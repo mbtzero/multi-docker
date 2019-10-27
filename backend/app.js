@@ -9,7 +9,7 @@ const mongoose = require('mongoose');
 
 
 
-var mongo_host = "mongodb://127.0.0.1:27017";
+var mongohost = "mongodb://127.0.0.1:27017";
 
 if (process.env.MONGODB_HOST) {
     mongohost = "mongodb://" + process.env.MONGODB_HOST;
