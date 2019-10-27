@@ -43,7 +43,7 @@ app.use("/user/", userRoutes);
 app.get('/test/',(req,res, next) => {
     res.status(200).json(
         {
-            message: 'Test successful',
+            message: 'Test 2 successful',
         });
 })
 
