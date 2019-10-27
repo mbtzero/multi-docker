@@ -5,7 +5,7 @@ const jwt = require("jsonwebtoken");
 const hash = require('object-hash');
 const router = express.Router();
 
-router.post('/signup',(req,res, next) => {
+router.post('/user/signup',(req,res, next) => {
         console.log('in signup api')
         hashed_pwd = hash(req.body.password);
         const user = new User(
@@ -27,7 +27,7 @@ router.post('/signup',(req,res, next) => {
 
 
 // Log user in
-router.post('/login',(req,res, next) => {
+router.post('/user/login',(req,res, next) => {
   console.log('in login api')
   let fetchedUser;
   User.findOne({ email: req.body.email})
