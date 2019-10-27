@@ -35,10 +35,10 @@ app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({extended: false}));
 app.use("/", express.static(path.join(__dirname,"angular")));
 
-app.use("/api/posts/", postsRoutes);
-app.use("/api/user/", userRoutes);
+app.use("/posts/", postsRoutes);
+app.use("/user/", userRoutes);
 
-app.get('/api/posts/',(req,res, next) => {
+app.get('/posts/',(req,res, next) => {
 
     PostModel.find( {visible: "1" } ).then((documents => {
       res.status(200).json(
@@ -50,14 +50,14 @@ app.get('/api/posts/',(req,res, next) => {
   );
 })
 
-app.get('/api/test/',(req,res, next) => {
+app.get('/test/',(req,res, next) => {
     res.status(200).json(
         {
             message: 'Test successful',
         });
 })
 
-app.get('/api/admin/posts/',(req,res, next) => {
+app.get('/admin/posts/',(req,res, next) => {
   PostModel.find( ).then((documents => {
       res.status(200).json(
         {

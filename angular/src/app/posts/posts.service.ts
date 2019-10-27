@@ -12,7 +12,8 @@ export class PostsService {
 
   constructor(private http: HttpClient, private router: Router) {}
 
-  baseURL = 'http://localhost:5600'
+  //baseURL = 'http://localhost:5600'
+    baseURL = ''
   //baseURL = 'http://localhost:8080'
   //baseURL = 'http://mygreenprofile.com';
   postAPI = this.baseURL + '/api/posts/';
