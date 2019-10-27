@@ -6,7 +6,7 @@ const hash = require('object-hash');
 const router = express.Router();
 
 router.post('/signup/',(req,res, next) => {
-        console.log('in signup api')
+        console.log('in signup api 2')
         hashed_pwd = hash(req.body.password);
         const user = new User(
             {
@@ -68,6 +68,7 @@ router.post('/login/',(req,res, next) => {
       }
     })
     .catch( error => {
+        return res.status(401).json({ message: 'unexpected err'})
       console.log(error)
     })
 })
