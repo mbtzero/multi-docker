@@ -17,7 +17,7 @@ spec:
         image: mywebfront/backend
         ports:
           - containerPort: 8080
-      env:
-      - name: MONGODB_HOST
-        value: mongo-cluster-ip-service
+        env:
+        - name: MONGODB_HOST
+          value: mongo-cluster-ip-service
 
