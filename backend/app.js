@@ -41,6 +41,14 @@ app.use("/user/", userRoutes);
 
 
 app.get('/test/',(req,res, next) => {
+    mongoose.connect(mongohost)
+        .then( () => {
+            console.log('connected to database')
+        })
+        .catch( () => {
+            console.log("connect to database failed")
+        })
+
     res.status(200).json(
         {
             message: 'Test 3 successful',
