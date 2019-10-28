@@ -78,10 +78,6 @@ router.post('/login/',(req,res, next) => {
         sts = sts + " inside catch err ";
       return res.status(401).json({ message: sts})
     })
-
-    sts = sts + "got here"
-    return res.status(401).json({ message: sts})
-
 })
 
 module.exports = router;
