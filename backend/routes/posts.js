@@ -5,7 +5,8 @@ const checkAuth = require('../middleware/check-auth');
 const router = express.Router();
 
 
-router.get('/posts/',(req,res, next) => {
+
+router.get('/',(req,res, next) => {
 
     PostModel.find( {visible: "1" } ).then((documents => {
             res.status(200).json(

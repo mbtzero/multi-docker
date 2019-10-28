@@ -48,14 +48,14 @@ app.get('/test/',(req,res, next) => {
 })
 
 app.get('/admin/posts/',(req,res, next) => {
-  PostModel.find( ).then((documents => {
-      res.status(200).json(
-        {
-          message: 'Post successfully fetched',
-          posts: documents,
-        });
-    })
-  );
+    PostModel.find( ).then((documents => {
+            res.status(200).json(
+                {
+                    message: 'Post successfully fetched',
+                    posts: documents,
+                });
+        })
+    );
 })
 
 
