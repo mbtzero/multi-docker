@@ -17,7 +17,7 @@ router.post('/signup/',(req,res, next) => {
 
     user.save().then(() => {
         console.log('user saved to database success + ' + hashed_pwd)
-        res.status(201).json({message: 'signup successful 2'});
+        return res.status(201).json({message: 'signup successful 2'});
     }).catch(() => {
         console.log('user save to dabase error')
         return res.status(401).json({ message: 'save failed'})
