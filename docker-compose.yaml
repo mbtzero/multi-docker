@@ -23,5 +23,9 @@ services:
       context: ./nginx
     ports:
       - '5600:80'
+  react:
+    build:
+      dockerfile: Dockerfile.dev
+      context: ./client
 volumes:
   mongodata:
