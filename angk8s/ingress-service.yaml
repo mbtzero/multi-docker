@@ -11,8 +11,12 @@ spec:
         paths:
           - path: /?(.*)
             backend:
-              serviceName: angular-cluster-ip-service
-              servicePort: 4200
+              serviceName: client-cluster-ip-service
+              servicePort: 3000
+          - path: /angular/?(.*)
+              backend:
+                serviceName: angular-cluster-ip-service
+                servicePort: 4200
           - path: /api/?(.*)
             backend:
               serviceName: backend-cluster-ip-service
