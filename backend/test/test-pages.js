@@ -1,3 +1,4 @@
+var express = require('express')
 var expect  = require('chai').expect;
 var request = require('request');
 
