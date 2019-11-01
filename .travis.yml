@@ -19,6 +19,7 @@ before_install:
 
 script:
 - docker run -e CI=true mywebfront/react-test npm test
+- docker run -e CI=true mywebfront/backend npm test
 deploy:
   provider: script
   script: bash ./deploy.sh

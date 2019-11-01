@@ -38,6 +38,10 @@ app.use("/", express.static(path.join(__dirname,"angular")));
 app.use("/posts/", postsRoutes);
 app.use("/user/", userRoutes);
 
+// for docker compose
+app.use("/api/posts/", postsRoutes);
+
+
 
 
 app.get('/test/',(req,res, next) => {

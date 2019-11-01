@@ -23,7 +23,7 @@ services:
       context: ./nginx
     ports:
       - '5600:80'
-  react:
+  client:
     build:
       dockerfile: Dockerfile.dev
       context: ./client

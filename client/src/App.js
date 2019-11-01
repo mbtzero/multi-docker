@@ -14,7 +14,7 @@ class App extends Component {
 
           <header className="App-header">
             <div>
-              <div class="Header-title">
+              <div className="Header-title">
                   MyGreenProfile
               </div>
 
